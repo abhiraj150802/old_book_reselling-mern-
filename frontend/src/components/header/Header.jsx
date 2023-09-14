@@ -1,5 +1,6 @@
 
 import { AppBar, Box, Toolbar, styled } from "@mui/material";
+import { Link } from "react-router-dom";
 
 //components
 import Searchbar from "./Searchbar";
@@ -9,8 +10,9 @@ const StyleHeader = styled(AppBar)`
    background:#2874f0;
    height:54px;
 `
-const StyleBox = styled(Box)`
+const StyleBox = styled(Link)`
   margin-left:12%;
+  text-decoration:none;
 `
 const CustomButtonWrapper = styled(Box)`
 margin:0 auto 0 5%;
@@ -21,7 +23,7 @@ const Header = () => {
 
     <StyleHeader>
       <Toolbar style={{ minHeight: 55 }}>
-        <StyleBox>
+        <StyleBox to="/">
           <img src={logoURL} alt="logo" style={{ width: 75 }} />
 
         </StyleBox>
