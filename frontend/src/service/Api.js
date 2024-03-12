@@ -17,3 +17,21 @@ export const AuthenticateLogin=async(data)=>{
       return error.response;
   } 
 }
+
+// error  so yet to complete 
+export const getProductById = async (id) => {
+  try {
+      return await axios.get(`${URL}/product/${id}`);
+  } catch (error) {
+      console.log('Error while getting product by id response', error);
+  }
+}
+
+export  const payUsingPaytm = async (data) => {
+  try {
+      let response = await axios.post(`${URL}/payment`, data);
+      return response.data;
+  } catch (error) {
+      console.log('Error', error);
+  }
+}
